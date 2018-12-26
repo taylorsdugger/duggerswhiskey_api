@@ -11,19 +11,21 @@ module.exports = {
             //Send email to owner
             emailHandler.handleEmailRequest(
             { 
-                from: 'info@duggerswhiskey.net',
+                email: 'info@duggerswhiskey.net',
                 subject: 'New wait list sign-up',
-                text: 'A new person signed up on the wait list', 
-                html: `<strong>New sign up for ${request.payload.whiskey_type}</strong><div>${request.payload.given_name}  ${request.payload.family_name} has joined the waiting list.</div>`
-            }, 'taylorsdugger@gmail.com');
+                message: 'A new person signed up on the wait list'
+            }, 
+            'taylorsdugger@gmail.com',
+            `<strong>New sign up for ${request.payload.whiskey_type}</strong><div>${request.payload.given_name}  ${request.payload.family_name} has joined the waiting list.</div>`);
             //Send email to user
             emailHandler.handleEmailRequest(
             { 
-                from: 'taylorsdugger@gmail.com', 
+                email: 'noreply@duggerswhiskey.net', 
                 subject: 'You have joined the waiting list!', 
-                text: `You have successfully signed up on the waiting list for ${request.payload.whiskey_type}. Hang tight, we will let you know when it is ready!`,
-                html: `<strong>You have successfully signed up on the waiting list for ${request.payload.whiskey_type}.<div>Hang tight, we will let you know when it is ready!</div></strong>` 
-            }, request.payload.email);
+                message: `You have successfully signed up on the waiting list for ${request.payload.whiskey_type}. Hang tight, we will let you know when it is ready!` 
+            }, 
+            request.payload.email,
+            `<strong>You have successfully signed up on the waiting list for ${request.payload.whiskey_type}.<div>Hang tight, we will let you know when it is ready!</div></strong>`);
 
             return h.response(results).code(200);
         } catch (err) {

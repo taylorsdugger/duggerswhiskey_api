@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@azure/cosmos": "^2.1.1",
+    "@sendgrid/client": "^6.3.0",
     "@sendgrid/mail": "^6.3.1",
     "hapi": "17.8.1",
     "hapi-and-healthy": "7.0.3",
