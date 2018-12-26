@@ -22,7 +22,7 @@ const init = async () => {
         await server.start();
         console.log(`Server running at: ${server.info.uri}`);
     } catch (error) {
-        console.log(err);
+        console.log(error);
     }
 };
 

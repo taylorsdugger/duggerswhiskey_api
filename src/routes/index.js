@@ -1,5 +1,7 @@
 'use strict'
 
-const sendEmail = require('./sendEmail');
+const sendEmailToOwner = require('./sendEmailToOwner');
+const joinWaitingList = require('./joinWaitingList');
+const getJoinedList = require('./getJoinedList');
 
-module.exports = [].concat(sendEmail);
+module.exports = [].concat(sendEmailToOwner, joinWaitingList, getJoinedList);
