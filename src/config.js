@@ -1,6 +1,6 @@
 module.exports = {
     cosmosDb: {
-        uri: process.env.COSMOS_DB
+        uri: '#{COSMOS_DB}#'
     },
-    sendgrid_api_key: process.env.SENDGRID_API_KEY
+    sendgrid_api_key: '#{SENDGRID_API_KEY}#'
 }
