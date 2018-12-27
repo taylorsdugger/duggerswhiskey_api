@@ -2,7 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "dependencies": {
     "@azure/cosmos": "^2.1.1",
     "@sendgrid/client": "^6.3.0",

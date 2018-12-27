@@ -1,9 +1,9 @@
 'use strict';
 
-const Hapi = require('hapi');
-const Joi = require('joi');
+const Hapi = require('hapi');D
 const routes = require('./routes');
 const mongo = require('./utils/mongoHelper');
+const config = require('./config');
 
 process.on('unhandledRejection', (err) => {
     console.log(err);
@@ -11,7 +11,7 @@ process.on('unhandledRejection', (err) => {
 });
 
 const server = Hapi.server({
-    port: 3001
+    port: config.port
 });
 
 const init = async () => {
