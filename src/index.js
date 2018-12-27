@@ -1,6 +1,6 @@
 'use strict';
 
-const Hapi = require('hapi');D
+const Hapi = require('hapi');
 const routes = require('./routes');
 const mongo = require('./utils/mongoHelper');
 const config = require('./config');
