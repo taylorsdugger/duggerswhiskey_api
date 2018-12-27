@@ -3,5 +3,5 @@ module.exports = {
         uri: '#{COSMOS_DB}#'
     },
     sendgrid_api_key: '#{SENDGRID_API_KEY}#',
-    port: process.env.port || 3001
+    port: process.env.PORT || 3001
 }
