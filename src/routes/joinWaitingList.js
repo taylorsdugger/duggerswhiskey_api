@@ -1,5 +1,6 @@
 const waitingListHandler = require('../handlers/waitingList.js');
 const emailHandler = require('../handlers/emailHandler.js');
+const config = require('../config');
 
 module.exports = {
     method: 'POST',
@@ -15,7 +16,7 @@ module.exports = {
                 subject: 'New wait list sign-up',
                 message: 'A new person signed up on the wait list'
             }, 
-            'taylorsdugger@gmail.com',
+            `${config.adminEmail}`,
             `<strong>New sign up for ${request.payload.whiskey_type}</strong><div>${request.payload.given_name}  ${request.payload.family_name} has joined the waiting list.</div>`);
             //Send email to user
             emailHandler.handleEmailRequest(
