@@ -1,5 +1,5 @@
 module.exports = {
-    cosmosDb: {
+    mongoDB: {
         uri: process.env.MONGO_DB_ATLAS
     },
     sendgrid_api_key: process.env.SENDGRID_API_KEY,
